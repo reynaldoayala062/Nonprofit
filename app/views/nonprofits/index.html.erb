@@ -1,0 +1,11 @@
+<h1> All Nonprofits </h1>
+<br>
+<ul>
+    <% @nonprofits.each do |n| %>
+        <li>
+            <a href='nonprofits/<%= n.id %>'>
+            <%= n.name %>
+            </a>
+        </li>
+    <% end %>
+</ul>

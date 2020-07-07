@@ -1,0 +1,11 @@
+<h1> All Programmers </h1>
+<br>
+<ul>
+    <% @programmers.each do |p| %>
+        <li>
+        <a href='/programmers/<%= p.id %>'>
+        <%= p.name %>
+        </a>
+        </li>
+    <% end %>
+</ul>
