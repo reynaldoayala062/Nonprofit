@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag 'user.css' %>
 <h1> <%= @category.name %> Info </h1>
 <br>
 <h2> Category Kind: </h2>
@@ -5,4 +6,8 @@
 <h2> Programming Language: </h2>
 <p><%=@category.description %></p>
 <br>
+<h2> All Projects that have <%= @category.name %> </h2>
+<% @category.projects.each do |p| %>
+    <h3> Project Name: <%= p.name %> </h3>
+<% end %>
 <%= button_to "View All Project Types", { :action => "index"}, :method => :get %>
