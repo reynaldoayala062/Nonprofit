@@ -8,6 +8,8 @@
 <br>
 <%= button_to "Create a New Programmer", new_programmer_path, :method => :get %>
 <br>
+<%= button_to "Logout", logout_path, :method => :get %>
+<br>
 <ul>
     <% @programmers.each do |p| %>
         <li>
