@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+
+  root to: 'pages#home'
   resources :programmer_projects
   resources :category_projects
   resources :categories
   resources :programmers
   resources :projects
   resources :nonprofits
+
   
   get 'signup', to: 'user#new', as: 'signup'
   post 'signup', to: 'user#create'
