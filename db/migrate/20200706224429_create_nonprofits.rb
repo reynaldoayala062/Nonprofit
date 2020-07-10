@@ -5,7 +5,7 @@ class CreateNonprofits < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :email
       t.string :address
-      t.integer :phone
+      t.string :phone
       t.string :category 
 
       t.timestamps 

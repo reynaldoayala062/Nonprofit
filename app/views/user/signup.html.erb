@@ -1,0 +1,27 @@
+
+<%= form_for(@user, url: signup_path) do |f| %>
+    
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@user.errors.uniq.count, "error") %>
+      prohibited this user from being saved:
+    </h2>
+ 
+    <ul>
+    <% @user.errors.full_messages.uniq.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+    <%= f.label :username %><br>
+    <%= f.text_field :username, placeholder: "Enter Username" %>
+    <br><br>
+    <%= f.label :password %><br>
+    <%= f.text_field :password, placeholder: "Enter Password"%>
+    <br><br>
+    <%= f.submit %>
+
+<% end %>

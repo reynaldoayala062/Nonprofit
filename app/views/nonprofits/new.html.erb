@@ -1,0 +1,39 @@
+<h1> Create a New Non Profit </h1>
+<br>
+<%= form_for @nonprofit do |n| %>
+
+<% if @nonprofit.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@nonprofit.errors.count, "error") %>
+      prohibited this nonprofit from being saved:
+    </h2>
+ 
+    <ul>
+    <% @nonprofit.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= n.label :name %>
+<%= n.text_field :name %>
+<br><br>
+<%= n.label :email %>
+<%= n.text_field :email %>
+<br><br>
+<%= n.label :phone %>
+<%= n.text_field :phone %>
+<br><br>
+<%= n.label :address %>
+<%= n.text_field :address %>
+<br><br>
+<%= n.label :category %>
+<%= n.text_field :category %>
+<br><br>
+<%= n.submit %>
+<% end %>
+
+
+

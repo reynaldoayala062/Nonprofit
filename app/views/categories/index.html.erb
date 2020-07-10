@@ -1,0 +1,18 @@
+<h1> Project Categories </h1>
+<%= button_to "View All Nonprofits", nonprofits_path, :method => :get %>
+<br> 
+<%= button_to "View All Programmers", programmers_path, :method => :get %>
+<br>
+<%= button_to "View All Projects", projects_path, :method => :get %>
+<br>
+<h2> Categories </h2>
+<ul>
+<% @category.each do |c| %>
+    <li>
+    <a href='/categories/<%= c.id %>'>
+    <%= c.name %>
+    </a>
+    </li>
+    <br>
+<% end %>
+</ul>

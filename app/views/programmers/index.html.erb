@@ -1,5 +1,13 @@
 <h1> All Programmers </h1>
 <br>
+<%= button_to "View All Nonprofits", nonprofits_path, :method => :get %> 
+<br>
+<%= button_to "View All Project", projects_path, :method => :get %>
+<br>
+<%= button_to "View All Project Categories", categories_path, :method => :get %>
+<br>
+<%= button_to "Create a New Programmer", new_programmer_path, :method => :get %>
+<br>
 <ul>
     <% @programmers.each do |p| %>
         <li>
@@ -9,3 +17,4 @@
         </li>
     <% end %>
 </ul>
+
