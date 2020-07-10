@@ -8,7 +8,8 @@
 <br>
 <%= button_to "Create a New Nonprofit", new_nonprofit_path, :method => :get %>
 <br>
-
+<%= button_to "Logout", logout_path, :method => :get %>
+<br>
 <ul>
     <% @nonprofits.each do |n| %>
         <li>

@@ -6,6 +6,8 @@
 <br>
 <%= button_to "View All Project Types", categories_path, :method => :get %>
 <br>
+<%= button_to "Logout", logout_path, :method => :get %>
+<br>
 <ul>
 <% @projects.each do |p| %>
     <li> 
