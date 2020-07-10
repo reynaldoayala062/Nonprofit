@@ -1,7 +1,17 @@
-<%= form_tag sessions_path do %>
+<%= stylesheet_link_tag 'user.css' %>
+<h1> Sign in to your profile</h1>
+
+<h2>
+    <%= form_tag sessions_path do %>
+    <br>
     <%= label_tag "Username" %>
+    <br>
     <%= text_field_tag "username" %>
+    <br>
     <%= label_tag "Password" %>
+    <br>
     <%= text_field_tag "password" %>
+    <br>
     <%= submit_tag "Sign In" %>
 <% end %>
+</h2>

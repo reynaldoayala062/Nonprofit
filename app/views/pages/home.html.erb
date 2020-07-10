@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag 'page.css' %>
 <h1> Welcome to Programmer Connect </h1>
 <br>
 <br>
@@ -9,7 +10,8 @@ and that there is many programmers willing to use their skills to help good caus
 <br>
 <br>
 
-<%= link_to "Create Account", signup_path %>
+
+<%= button_to "Create Account ", signup_path, :method => :get %>
 <br>
 <br>
-<%= link_to "Sign In to your account", login_path %>
+<%= button_to "Already a user", login_path, :method => :get %>

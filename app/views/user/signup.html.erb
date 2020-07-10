@@ -1,3 +1,7 @@
+<%= stylesheet_link_tag 'user.css' %>
+<h1> Create a user </h1>
+
+<h2> Sign in below to see a list of programmers and non-profits on our system, and to see available projects </h2>
 
 <%= form_for(@user, url: signup_path) do |f| %>
     
@@ -15,13 +19,20 @@
     </ul>
   </div>
 <% end %>
-
+<h3>
     <%= f.label :username %><br>
     <%= f.text_field :username, placeholder: "Enter Username" %>
-    <br><br>
+    <br>
     <%= f.label :password %><br>
     <%= f.text_field :password, placeholder: "Enter Password"%>
-    <br><br>
+    <br>
+    
     <%= f.submit %>
-
+</h3>
 <% end %>
+
+<br>
+<%= button_to "Home Page", root_path, :method => :get %>
+<br>
+<br>
+<%= button_to "Log In", login_path, :method => :get %>
