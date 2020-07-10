@@ -1,0 +1,20 @@
+<h1> Edit Nonprofits Info </h1>
+
+<%= form_for @nonprofit do |n| %>
+<%= n.label :name %>
+<%= n.text_field :name %>
+<br><br>
+<%= n.label :email %>
+<%= n.text_field :email %>
+<br><br>
+<%= n.label :phone %>
+<%= n.text_field :phone %>
+<br><br>
+<%= n.label :address %>
+<%= n.text_field :address %>
+<br><br>
+<%= n.label :category %>
+<%= n.text_field :category %>
+<br><br>
+<%= n.submit %>
+<% end %>

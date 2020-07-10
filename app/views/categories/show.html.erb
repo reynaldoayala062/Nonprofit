@@ -1,0 +1,8 @@
+<h1> <%= @category.name %> Info </h1>
+<br>
+<h2> Category Kind: </h2>
+<p><%=@category.kind %></p>
+<h2> Programming Language: </h2>
+<p><%=@category.description %></p>
+<br>
+<%= button_to "View All Project Types", { :action => "index"}, :method => :get %>

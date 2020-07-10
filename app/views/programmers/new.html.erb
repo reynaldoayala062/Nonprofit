@@ -1,0 +1,30 @@
+<h1> Create a New Programmer </h1>
+<br>
+<%= form_for @programmer do |p| %>
+
+<% if @programmer.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@programmer.errors.count, "error") %>
+      prohibited this programmer from being saved:
+    </h2>
+ 
+    <ul>
+    <% @programmer.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= p.label :name %>
+<%= p.text_field :name %>
+<br><br>
+<%= p.label :email %>
+<%= p.text_field :email %>
+<br><br>
+<%= p.label :phone %>
+<%= p.text_field :phone %>
+<br><br>
+<%= p.submit %>
+<% end %>

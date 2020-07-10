@@ -1,0 +1,15 @@
+<h1> Nonprofit Info </h1>
+<br>
+<h2> Name: <%= @nonprofit.name %> </h2>
+<h3> Email: <%= @nonprofit.email %> </h3>
+<h3> Phone Number: <%= @nonprofit.phone %> </h3>
+<h3> Address: <%= @nonprofit.address %> </h3>
+<h3> Category: <%= @nonprofit.category %> </h3>
+
+<%= button_to "Edit Nonprofits", { :action => "edit"}, :method => :get %>
+<br>
+<%= button_to "Delete", { :action => "destroy"}, :method => :delete %>
+<br>
+<%= button_to "View All Nonprofits", { :action => "index"}, :method => :get %>
+
+

@@ -1,5 +1,13 @@
 <h1> Programmers Info </h1>
 <br>
-<h2> <%= @programmer.name %> </h2>
-<h3> <%= @programmer.email %> </h3>
-<h3> <%= @programmer.phone %> </h3>
+<h2> Name: <%= @programmer.name %> </h2>
+<h3> Email: <%= @programmer.email %> </h3>
+<h3> Phone: <%= @programmer.phone %> </h3>
+
+<%= button_to "Edit Programmers Info", { :action => "edit"}, :method => :get %>
+<br>
+<%= button_to "Delete", { :action => "destroy"}, :method => :delete %>
+<br>
+<%= button_to "View All Programmers", { :action => "index"}, :method => :get %>
+
+
