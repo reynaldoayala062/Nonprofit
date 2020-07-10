@@ -1,10 +1,17 @@
-<h1> All Projects </h1>
+<%= stylesheet_link_tag 'user.css' %>
+
+<h1> All Current Projects </h1>
 <br>
+<h2> Below is a list of all of our current projects. <br>
+You can also see a list of all non-profits and programmers we work with in the links below.
+</h2>
 <%= button_to "View All Nonprofits", nonprofits_path, :method => :get %> 
 <br>
 <%= button_to "View All Programmers", programmers_path, :method => :get %>
 <br>
 <%= button_to "View All Project Types", categories_path, :method => :get %>
+<br>
+<%= button_to "Logout", logout_path, :method => :get %>
 <br>
 <ul>
 <% @projects.each do |p| %>

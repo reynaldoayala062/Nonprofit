@@ -1,15 +1,41 @@
-<h1> Welcome to Programmer Connect </h1>
-<br>
-<br>
-<br>
-<h2> Our mission is to connect programmers to non-profits. </h2>
+<style>
+.jumbotron {
+  background-color: #f4511e; /* Orange */
+  color: #ffffff;
+}
+</style>
 
-<h3> We believe there is many non-profits that could use the help of programmers, <br> 
-and that there is many programmers willing to use their skills to help good causes. </h3>
-<br>
-<br>
+<body>
+<div class="jumbotron text-center">
+<h1>Welcome to Programmer Connect</h1>
+<p>Connecting Programmers with Non-profits</p>
+  <div class=""input-group-btn">  
+  <button type="button" class="btn btn-danger"><%= button_to "Log In", login_path, :method => :get %></button>
+  <button type="button" class="btn btn-danger"><%= button_to "Create User", signup_path, :method => :get %></button>
+  </div>
+</div>
 
-<%= link_to "Create Account", signup_path %>
-<br>
-<br>
-<%= link_to "Sign In to your account", login_path %>
+<style>
+.logo {
+  font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+</style>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo"></span>
+    </div>
+    <div class="col-sm-4">
+      
+      <br>
+      <h4><strong>OUR MISSION:</strong> <br> We believe there is many non-profits that could use the help of programmers, and that there is many programmers willing to use their skills to help. Our mission is to connect them.</h4>
+    </div>
+  </div>
+</div>

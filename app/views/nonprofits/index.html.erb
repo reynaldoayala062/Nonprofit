@@ -1,4 +1,11 @@
+<%= stylesheet_link_tag 'user.css' %>
 <h1> All Nonprofits </h1>
+<h2> Below is a list of all non-profits we currently work with. <br>
+You can click on them to see more detailed info. <br><br>
+We encourage you to sign up your non-profit if you are in need of programmers. <br><br>
+You can also see a list of all programmers we work with and projects <br>
+available in the links below.
+</h2>
 <br>
 <%= button_to "View All Programmers", programmers_path, :method => :get %>
 <br>
@@ -8,7 +15,8 @@
 <br>
 <%= button_to "Create a New Nonprofit", new_nonprofit_path, :method => :get %>
 <br>
-
+<%= button_to "Logout", logout_path, :method => :get %>
+<br>
 <ul>
     <% @nonprofits.each do |n| %>
         <li>
