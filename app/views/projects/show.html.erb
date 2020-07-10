@@ -5,10 +5,18 @@
 <h2> Nonprofit Name: <%= @project.nonprofit.name %> </h2>
 <h3> Project Name: <%= @project.name %> </h3>
 <br>
+<% @project.programmers.each do |p| %>
+    <h3> Programmer Name: <%= p.name %> </h3>
+<% end %>
+<br>
+<ul>
 <% @project.categories.each do |p| %>
-    <%= p.name %>
+    <li><h3> Project Type: <%= p.name %></h3></li><br>
+    <ol> Category Kind : <%= p.kind %></ol><br>
+    <ol> Description: <%= p.description %></ol><br>
     <br>
 <% end %>
+</ul>
 <br>
 <br>
 

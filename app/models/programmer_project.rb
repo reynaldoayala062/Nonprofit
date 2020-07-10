@@ -1,4 +1,4 @@
 class ProgrammerProject < ApplicationRecord
-    belongs_to :project 
-    belongs_to :programmer
+    belongs_to :programmer 
+    belongs_to :project
 end

@@ -15,11 +15,11 @@ nonprofit_category = ["Civic League", "Social Welfare Organization or Local Empl
     Programmer.create(name: Faker::Name.name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone )
 end
 
-30.times do 
+16.times do 
     Nonprofit.create(name: Faker::Company.name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone, address: Faker::Address.street_address, category: nonprofit_category.sample)
 end
 
-30.times do 
+16.times do 
     Project.create(name: Faker::App.name, nonprofit_id: Nonprofit.all.sample.id)
 end
 
@@ -36,6 +36,60 @@ category = [
 
 category.each {|category| Category.create(category)}
 
-100.times do
-    CategoryProject.create(project_id: Project.all.sample.id, category_id: Category.all.sample.id) 
-end
+categoryproject = [
+    {project_id: 1, category_id: 1 },
+    {project_id: 1, category_id: 3 },
+    {project_id: 2, category_id: 2 },
+    {project_id: 2, category_id: 4 },
+    {project_id: 3, category_id: 5 },
+    {project_id: 3, category_id: 6 },
+    {project_id: 4, category_id: 1 },
+    {project_id: 4, category_id: 8 },
+    {project_id: 5, category_id: 2 },
+    {project_id: 5, category_id: 7 },
+    {project_id: 6, category_id: 5 },
+    {project_id: 6, category_id: 6 },
+    {project_id: 7, category_id: 3 },
+    {project_id: 7, category_id: 7 },
+    {project_id: 8, category_id: 3 },
+    {project_id: 8, category_id: 2 },
+    {project_id: 9, category_id: 1 },
+    {project_id: 9, category_id: 4 },
+    {project_id: 10, category_id: 4 },
+    {project_id: 10, category_id: 8 },
+    {project_id: 11, category_id: 8 },
+    {project_id: 11, category_id: 7 },
+    {project_id: 12, category_id: 6 },
+    {project_id: 12, category_id: 3 },
+    {project_id: 13, category_id: 2 },
+    {project_id: 13, category_id: 1 },
+    {project_id: 14, category_id: 6 },
+    {project_id: 14, category_id: 4 },
+    {project_id: 15, category_id: 3 },
+    {project_id: 15, category_id: 7 },
+    {project_id: 16, category_id: 8 },
+    {project_id: 16, category_id: 6 },
+]
+
+categoryproject.each {|categoryproject| CategoryProject.create(categoryproject)}
+
+programmerproject = [
+    {programmer_id: 1, project_id: 1 },
+    {programmer_id: 2, project_id: 2 },
+    {programmer_id: 3, project_id: 3 },
+    {programmer_id: 4, project_id: 4 },
+    {programmer_id: 5, project_id: 5 },
+    {programmer_id: 6, project_id: 6 },
+    {programmer_id: 7, project_id: 7 },
+    {programmer_id: 8, project_id: 8 },
+    {programmer_id: 9, project_id: 9 },
+    {programmer_id: 10, project_id: 10 },
+    {programmer_id: 1, project_id: 11 },
+    {programmer_id: 2, project_id: 12 },
+    {programmer_id: 3, project_id: 13 },
+    {programmer_id: 4, project_id: 14 },
+    {programmer_id: 5, project_id: 15 },
+    {programmer_id: 6, project_id: 16 },
+]
+
+programmerproject.each {|programmerproject| ProgrammerProject.create(programmerproject)}

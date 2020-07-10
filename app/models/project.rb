@@ -4,6 +4,4 @@ class Project < ApplicationRecord
     has_many :programmers, through: :programmer_projects
     has_many :category_projects
     has_many :categories, through: :category_projects
-
-
 end
